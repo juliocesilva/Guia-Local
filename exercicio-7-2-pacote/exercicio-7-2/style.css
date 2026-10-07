@@ -122,6 +122,48 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.dicas {
+  padding: 2rem;
+  background: #edf5fb;
+  border-top: 1px solid #dfeaf2;
+}
+
+.dicas-cabecalho {
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  color: #2980b9;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.dicas h3 {
+  color: #1f3b54;
+  font-size: 1.4rem;
+}
+
+.dicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.dica-item {
+  background: #fff;
+  border: 1px solid #d9e4ee;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.dica-item h4 {
+  margin-bottom: 0.5rem;
+  color: #2980b9;
+}
+
 /* Galeria: usa Grid para colunas responsivas */
 .cards {
   display: grid;
