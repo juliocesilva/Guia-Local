@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-/* A página inteira como grade: quatro áreas nomeadas em duas colunas,
-   rodapé sempre embaixo */
 body {
   font-family: system-ui, sans-serif;
   color: #333;
@@ -15,9 +13,13 @@ body {
     "topo topo"
     "lado conteudo"
     "rodape rodape";
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 220px 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+}
+
+a {
+  color: inherit;
 }
 
 .cabecalho {
@@ -44,6 +46,7 @@ body {
 
 .menu-lista {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
 }
@@ -53,8 +56,8 @@ body {
   padding: 0.75rem;
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
   border-radius: 6px;
+  font-weight: 500;
 }
 
 .menu-lista a:hover {
@@ -78,25 +81,24 @@ body {
 }
 
 .lateral-titulo {
+  margin-bottom: 0.75rem;
   font-size: 1rem;
   font-weight: 600;
   color: #2980b9;
-  margin-bottom: 0.75rem;
 }
 
 .lateral-lista {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  list-style: none;
 }
 
 .lateral-lista a {
   display: block;
   padding: 0.5rem 0.75rem;
-  color: #333;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
 }
 
 .lateral-lista a:hover {
@@ -109,17 +111,17 @@ main {
 
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 35vh;
+  padding: 1rem;
   background: #f8f9fa;
   text-align: center;
-  padding: 1rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .dicas {
@@ -133,12 +135,12 @@ main {
 }
 
 .eyebrow {
+  margin-bottom: 0.35rem;
   color: #2980b9;
   font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.35rem;
+  text-transform: uppercase;
 }
 
 .dicas h3 {
@@ -153,10 +155,10 @@ main {
 }
 
 .dica-item {
+  padding: 1rem 1.25rem;
   background: #fff;
   border: 1px solid #d9e4ee;
   border-radius: 8px;
-  padding: 1rem 1.25rem;
 }
 
 .dica-item h4 {
@@ -164,37 +166,33 @@ main {
   color: #2980b9;
 }
 
-/* Galeria: usa Grid para colunas responsivas */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  align-items: start;   /* ← adicionar esta linha */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   padding: 2rem;
 }
 
 .card {
-  flex: 1 1 280px;
+  padding: 1.5rem;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1.5rem;
 }
 
 .card h3 {
-  color: #3498db;
   margin-bottom: 0.5rem;
+  color: #3498db;
 }
 
-/* Agenda: visual pronto, layout a decidir */
 .agenda {
   padding: 0 2rem 2rem;
 }
 
 .agenda-titulo {
-  font-size: 1.1rem;
-  color: #2980b9;
   margin-bottom: 0.75rem;
+  color: #2980b9;
+  font-size: 1.1rem;
 }
 
 .agenda-lista {
@@ -204,20 +202,20 @@ main {
 .agenda-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
   background: #fff;
   border: 1px solid #ddd;
   border-left: 4px solid #2980b9;
   border-radius: 6px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .agenda-item time {
-  font-weight: 700;
-  color: #2980b9;
   margin-right: 0.5rem;
+  color: #2980b9;
+  font-weight: 700;
 }
 
 .agenda-item span {
@@ -226,13 +224,12 @@ main {
 
 .rodape {
   grid-area: rodape;
+  padding: 1.5rem;
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 1.5rem;
 }
 
-/* Reflow para telas pequenas: empilha as áreas em uma coluna só */
 @media (max-width: 640px) {
   body {
     grid-template-columns: 1fr;
@@ -241,5 +238,13 @@ main {
       "conteudo"
       "lado"
       "rodape";
+  }
+
+  .cabecalho {
+    align-items: flex-start;
+  }
+
+  .menu-lista {
+    width: 100%;
   }
 }
