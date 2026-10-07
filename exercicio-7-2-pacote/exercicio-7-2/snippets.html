@@ -1,0 +1,41 @@
+<!-- Snippets dos eventos — cole somente quando o evento for liberado -->
+
+<!-- EVENTO 1 — cole estes 4 cards dentro de .cards, depois dos existentes -->
+
+<article class="card">
+  <h3>Jardim Japonês</h3>
+  <p>Trilhas sombreadas, lagos e casa de chá.</p>
+</article>
+<article class="card">
+  <h3>Museu de Arte Contemporânea e História Natural de Mogi das Cruzes</h3>
+  <p>Exposições rotativas e acervo permanente.</p>
+</article>
+<article class="card">
+  <h3>Sesc</h3>
+  <p>Atividades esportivas e culturais.</p>
+</article>
+<article class="card">
+  <h3>Bosque da Paz</h3>
+  <p>Picnic, playground e anfiteatro ao ar livre.</p>
+</article>
+
+
+<!-- EVENTO 4 — troque o texto do h2 do hero por este título longo para testar -->
+
+<!-- <h2>Festival de inverno de Mogi das Cruzes celebra a cultura da cidade</h2> -->
+
+
+<!-- SOLUÇÕES: Grid vs Flex (inserido pelo assistente) -->
+<section class="solutions">
+  <h2>Soluções — Grid e Flex</h2>
+
+  <h3>Onde pretendemos usar Grid e onde Flex, e por quê:</h3>
+  <p>Vamos usar CSS Grid em <code>.cards</code>, porque a quantidade de locais não é fixa e precisamos que os cards mantenham uma largura consistente conforme novos itens entrarem (<code>repeat(auto-fill, minmax(260px, 1fr))</code>). Vamos usar Flexbox em <code>.agenda</code> — dentro de cada <code>.agenda-item</code>, para alinhar data, título e local numa linha — porque é uma lista que cresce só numa direção (vertical) e não precisa do controle bidimensional do Grid.</p>
+
+  <h3>Como esperamos que os cards se comportem quando o conteúdo crescer:</h3>
+  <p>Esperamos que cada card mantenha a largura mínima definida (por volta de 260px) e que o layout simplesmente abra novas linhas conforme mais locais forem adicionados, sem que os itens da última linha fiquem esticados de forma desigual em relação aos das linhas cheias.</p>
+
+  <h3>Qual problema achamos que vai aparecer primeiro:</h3>
+  <p>Achamos que vai aparecer na galeria de cards, ainda herdada em Flexbox (<code>flex: 1 1 280px</code>): quando a última linha não fechar completamente, o <code>flex-grow</code> vai esticar os cards restantes de forma desigual, deixando a galeria com larguras inconsistentes assim que o número de locais não for múltiplo exato do que cabe por linha.</p>
+</section>
+
