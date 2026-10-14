@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Locais e Eventos — Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="identidade">
+      <p class="logo">Guia de Locais</p>
+      <p class="titulo">Mogi das Cruzes</p>
+    </div>
+    <nav aria-label="Menu principal">
+      <ul class="menu-lista">
+        <li><a href="index.html" aria-current="page" class="ativo">Início</a></li>
+        <li><a href="#locais">Locais</a></li>
+        <li><a href="#agenda">Eventos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="lateral">
+    <nav aria-label="Categorias de locais">
+      <h2 class="lateral-titulo">Explorar</h2>
+      <ul class="lateral-lista">
+        <li><a href="#locais">Parques</a></li>
+        <li><a href="#locais">Museus</a></li>
+        <li><a href="#locais">Teatros</a></li>
+        <li><a href="#agenda">Eventos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Descubra sua cidade</h2>
+        <p>Locais, eventos e programação cultural em um só lugar.</p>
+      </div>
+    </section>
+
+    <section class="dicas" aria-label="Dicas do guia">
+      <div class="dicas-cabecalho">
+        <p class="eyebrow">Dicas rápidas</p>
+        <h3>Como aproveitar melhor a cidade</h3>
+      </div>
+      <div class="dicas-grid">
+        <article class="dica-item">
+          <h4>Para começar o dia</h4>
+          <p>Um passeio no Parque Centenário é ideal para caminhar, tomar café e curtir um clima tranquilo.</p>
+        </article>
+        <article class="dica-item">
+          <h4>Se você gosta de cultura</h4>
+          <p>Reserve um horário para visitar o Museu Municipal e conferir exposições e histórias locais.</p>
+        </article>
+        <article class="dica-item">
+          <h4>Para a noite</h4>
+          <p>Confira a agenda do Teatro Vasconcelos e escolha uma programação que combine música, teatro e cultura.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cards" id="locais">
+      <article class="card">
+        <h3>Parque Centenário</h3>
+        <p>Área verde, pista de caminhada e eventos gratuitos.</p>
+      </article>
+      <article class="card">
+        <h3>Museu Municipal</h3>
+        <p>Acervo histórico e exposições temporárias.</p>
+      </article>
+      <article class="card">
+        <h3>Teatro Vasconcelos</h3>
+        <p>Espetáculos de teatro, música e dança.</p>
+      </article>
+      <article class="card">
+        <h3>Mercado Municipal</h3>
+        <p>Produtos locais, gastronomia e feiras temáticas.</p>
+      </article>
+    </section>
+
+    <section class="agenda" id="agenda">
+      <h3 class="agenda-titulo">Próximos eventos</h3>
+      <ul class="agenda-lista">
+        <li class="agenda-item">
+          <time datetime="2026-09-26">26 set</time>
+          <strong>Feira gastronômica</strong>
+          <span>Mercado Municipal</span>
+        </li>
+        <li class="agenda-item">
+          <time datetime="2026-10-03">03 out</time>
+          <strong>Orquestra no parque</strong>
+          <span>Parque Centenário</span>
+        </li>
+        <li class="agenda-item">
+          <time datetime="2026-10-10">10 out</time>
+          <strong>Mostra de cinema</strong>
+          <span>Teatro Vasconcelos</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape" id="contato">
+    <p>Guia de Locais e Eventos — Mogi das Cruzes</p>
+  </footer>
+</body>
+</html>
